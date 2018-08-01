@@ -1,0 +1,27 @@
+{
+  "name": "node_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "fs": "^0.0.1-security",
+    "jade": "^1.11.0",
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.0",
+    "sequelize": "^4.38.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.2.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-react": "^7.10.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zhangzhen",
+  "license": "ISC"
+}
