@@ -2,11 +2,14 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const logger = require("morgan");
+const chalk = require("chalk");
 const cookieParser = require("cookie-parser");
 const sessionParser = require("express-session");
 const bodyParser = require("body-parser");
 const router = require("./routers/index");
 /* global __dirname */
+
+// 解析cookie和session还有body
 app.use(cookieParser()); // 挂载中间件，可以理解为实例化
 app.use(sessionParser({
 	"secret": "ruidoc",     // 签名，与上文中cookie设置的签名字符串一致，
@@ -19,14 +22,23 @@ app.use(sessionParser({
 app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
+
+// 设置模板引擎
 app.set("view engine", "jade");// 设置jade为模板引擎
 app.set("views", path.resolve(__dirname, "views"));// 指定模板引擎的路径
 // app.use(express.static("./views"));
-app.use(logger("dev"));
 
+// 打印日志
+app.use(logger(":method :url :status :res[content-length] - :response-time ms"));
+
+// 设置静态区
+app.use(express.static("public"));
+
+// 路由
 router(app);
 
+// 监听3001端口
 const server = app.listen(3001, () => {
-	console.log(server);
-	console.log("server is listenning 3001");
+	console.log(chalk.yellow(server));
+	console.log(chalk.yellow("server is listenning 3001"));
 });
