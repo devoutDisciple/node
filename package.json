@@ -12,13 +12,16 @@
     "jade": "^1.11.0",
     "mysql": "^2.16.0",
     "mysql2": "^1.6.0",
-    "sequelize": "^4.38.0"
+    "sequelize": "^4.38.0",
+    "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
     "chalk": "^2.4.1",
     "eslint": "^5.2.0",
     "eslint-config-google": "^0.9.1",
     "eslint-plugin-react": "^7.10.0",
+    "morgan": "^1.9.0",
     "nodemon": "^1.18.4"
   },
   "scripts": {
