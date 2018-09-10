@@ -6,7 +6,7 @@ const chalk = require("chalk");
 const cookieParser = require("cookie-parser");
 const sessionParser = require("express-session");
 const bodyParser = require("body-parser");
-const router = require("./routers/index");
+const controller = require("./controller/index");
 const favicon = require("serve-favicon");
 /* global __dirname */
 
@@ -48,8 +48,8 @@ app.all("*", (req, res, next) => {
 	next();
 });
 
-// 路由
-router(app);
+// 路由 controller层
+controller(app);
 
 // 监听3001端口
 const server = app.listen(3001, () => {

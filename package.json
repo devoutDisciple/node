@@ -23,7 +23,8 @@
     "eslint-config-google": "^0.9.1",
     "eslint-plugin-react": "^7.10.0",
     "morgan": "^1.9.0",
-    "nodemon": "^1.18.4"
+    "nodemon": "^1.18.4",
+    "shelljs": "^0.8.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
