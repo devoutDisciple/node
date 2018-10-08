@@ -1,1 +1,1 @@
-node项目
+使用node写的后端程序，使用express框架，以及路由配置，orm框架sequelize，以及连接池的使用
